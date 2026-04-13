@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Новенький — Серия 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="background" id="background"></div>
+        <div class="fade-overlay" id="fadeOverlay"></div>
+        
+        <div class="side-text-left">GANGS•GANGS•GANGS</div>
+        <div class="side-text-right">STREET•STREET•STREET</div>
+        
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        
+        <div class="avatar-container">
+            <img class="avatar" id="avatarImg" src="" alt="avatar">
+        </div>
+        
+        <div class="dialogue-box" id="dialogueBox">
+            <div class="speaker-name" id="speakerName"></div>
+            <div class="dialogue-text" id="dialogueText"></div>
+            <div class="continue-hint">▼ нажми в любом месте ▼</div>
+        </div>
+        
+        <div class="choices-panel" id="choicesPanel">
+            <div class="choices-title">⚡ ЧТО ДЕЛАТЬ? ⚡</div>
+            <div id="choicesList"></div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="status-badge" id="statusBadge">СЕРИЯ 6: НОВЕНЬКИЙ</div>
+        <div class="back-to-menu" id="backToMenu">🏠 МЕНЮ</div>
+        
+        <!-- КНОПКА НАСТРОЕК -->
+        <div class="settings-btn-series" id="settingsBtnSeries">⚙️</div>
+        
+        <!-- ПАНЕЛЬ НАСТРОЕК -->
+        <div class="settings-panel-series" id="settingsPanelSeries">
+            <div class="settings-header-series">
+                <span class="settings-title-series">⚙️ НАСТРОЙКИ</span>
+                <button class="close-settings-series" id="closeSettingsBtnSeries">✕</button>
+            </div>
+            <div class="settings-content-series">
+                <div class="setting-item-series">
+                    <div class="setting-label-series">
+                        <span class="setting-icon-series">🎵</span>
+                        <span id="musicLabelSeries">Фоновая музыка</span>
+                    </div>
+                    <label class="toggle-switch-series">
+                        <input type="checkbox" id="musicToggleSeries" checked>
+                        <span class="toggle-slider-series"></span>
+                    </label>
+                </div>
+                <div class="setting-item-series">
+                    <div class="setting-label-series">
+                        <span class="setting-icon-series">🔊</span>
+                        <span id="volumeLabelSeries">Громкость</span>
+                    </div>
+                    <div class="volume-control-series">
+                        <span class="volume-icon-series">🔉</span>
+                        <input type="range" id="volumeSliderSeries" min="0" max="100" value="50">
+                        <span class="volume-icon-series">🔊</span>
+                        <span class="volume-value-series" id="volumeValueSeries">50%</span>
+                    </div>
+                </div>
+                <div class="setting-item-series">
+    <div class="setting-label-series">
+        <span class="setting-icon-series">⚡</span>
+        <span>Авточтение</span>
+    </div>
+    <label class="toggle-switch-series" onclick="event.stopPropagation()">
+        <input type="checkbox" id="autoReadToggleSeries">
+        <span class="toggle-slider-series"></span>
+    </label>
+</div>
+<div class="setting-item-series">
+    <div class="setting-label-series">
+        <span class="setting-icon-series">⏱️</span>
+        <span>Скорость</span>
+    </div>
+    <select id="autoReadSpeedSeries" class="theme-select" onclick="event.stopPropagation()">
+        <option value="2000">Быстро (2 сек)</option>
+        <option value="3000" selected>Средне (3 сек)</option>
+        <option value="5000">Медленно (5 сек)</option>
+    </select>
+</div>
+                <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+                <div class="setting-item-series">
+                    <div class="setting-label-series">
+                        <span class="setting-icon-series">🌐</span>
+                        <span id="languageLabelSeries">Язык / Language</span>
+                    </div>
+                    <label class="toggle-switch-series">
+                        <input type="checkbox" id="languageToggleSeries">
+                        <span class="toggle-slider-series"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script6.js"></script>
+</body>
+</html>
